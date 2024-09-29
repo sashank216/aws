@@ -1,0 +1,93 @@
+AWS ---
+
+AGENDA Day-1
+
+Virtulization - virtual servers/layer on actual services 
+each virtual server - one application can be deployed
+
+private Cloud -- within the organization which maintains the cloud platforms.
+vmware etc....
+
+public cloud -- access the server - by anybody
+provided by aws,azure,gcp they create the resources
+
+services by aws - vm, storage, volume, db - more than 200 services
+recent - k8s service.
+
+cloud repatriation - Moving from public cloud to private cloud
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

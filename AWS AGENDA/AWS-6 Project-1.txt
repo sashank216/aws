@@ -1,0 +1,36 @@
+PROJECT
+
+AUTOSCALING GROUP
+
+LOAD BALANCER
+
+TARGET GROUP - Collection of your targets i.e ec2 instances etc  which helps to run your application
+
+BASTON HOST OR JUMP HOST - SUBNET is created with this request and connecting server
+for proper logging mechanisam 
+
+Elastic IP Address - Is the one which remains the same ip address even if the instance is deleted
+
+
+Auto Scaling - In aws auto scaling can be created automatically there is a template which acts as a mediator for creation
+
+Launch Template - Acts as a reference  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

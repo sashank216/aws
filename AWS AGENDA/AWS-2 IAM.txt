@@ -1,0 +1,26 @@
+IAM - Identity and Access Management
+
+IAM - Authentication and Authorization 
+Grants the permission to the user for the access of any service
+
+--User, Policies, Groups.
+-Roles
+
+User - Requests access to aws - Authentication
+
+Policies - What user has to do.
+Granting permissions for authorization.
+
+Groups - Improve the efficiency 
+         to reduce the workload creating or the manual process of creating user and adding the policies
+to automate this process groups is useful
+
+create the user and attach the policies and throw the user in that group
+
+Roles - Username and password - for temporary
+        for particular service
+similar to user 
+
+Roles are used for communicating b/w two aws accounts.
+
+As a AWS DevOps user - IAM user is used not root user

@@ -1,0 +1,21 @@
+EC2 Deep Dive
+
+Elastic Cloud Compute - combination of cpu ram and disk --> virtual server
+ |
+ |
+ we can increase the services or decrease services
+
+give the virtual machine in elastic nature
+
+Types of EC2 instances - 5 different types as of now
+--> General Purpose instances
+--> Compute Optimized instances- ml models, game models, data analytics
+--> Memory instances - High peroformance , highly efficiency
+--> Storage
+--> Accelerated
+
+Inbound rules - Traffic coming inside aws
+
+outbound rules - traffic going outside aws
+
+aws public ipaddress on our system-ssh -i aws_login.pem ubuntu@publicaddress

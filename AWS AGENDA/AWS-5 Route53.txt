@@ -1,0 +1,24 @@
+ROUTE53
+
+It provides DNS as service
+
+DNS- Domain Name Service
+
+DNS should be converted to IP ADDRESS
+DNS Service - That maps your domain name to ipaddress
+ex: assigns application to ipaddress it resolves to ipaddress
+ex: assigns load balancer to ipaddress it resolves to ipaddress
+
+DNS - Keeps a lot of records
+
+maps domain name to ipaddress 
+
+ 
+Route53: It intercepts the requestfrom internet it checks its dns records 
+try to resolve the ipaddress name to the load balancer.
+
+-> Domain Registration - Sells domains too or can get it from Godaddy
+
+-> Hosted Zones - Update the records. Put some resources in hosted zones -> we create some records
+
+-> Route53: Also performs health checks of webservers

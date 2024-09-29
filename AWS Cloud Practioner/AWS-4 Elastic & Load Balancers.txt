@@ -1,0 +1,137 @@
+IAAS ( Infrastructure as a Service )
+
+. Use only infra from cloud provider
+-> Computers ( Virtual or on dedicated hardware), data storage
+   space and Networking features
+
+. Also called "Lift and Shift"
+-> Example: Using EC2 to deploy your applications
+-> Example: Using EC2 to create your db
+
+. Cloud Provider is responsible for:
+ -> Physical Infra (Hardware, Networking)
+ -> Virtulization Layer( Hypervisor, Host OS)
+
+. Customer is responsible for:
+
+  -> Guest OS upgrades and patches
+  -> Application Code and Runtime
+  -> Availability, Fault Tolerance, Scalability etc.
+
+ Application
+
+ Application Runtime ----->   ---->|
+
+ OS                 ------>   ---->
+
+ Virtualization  ----->       ---->  PAAS
+
+ Physical Hardware ----> IAAS ---->
+ 
+ Networking        ----->     ---->
+
+
+
+PAAS (Platform as a Service)
+
+. Use platfrom provided by cloud
+. Cloud provider is responsible for:
+--> OS ( incl. upgrades and patches)
+--> Application Runtime
+---> Auto Scaling, Availability & Load Balancing etc...
+
+. Customer is responsible for:
+
+--> Application code and/or
+--> Configuration
+
+-----------------------------------------------------------------------
+
+AWS Managed Service Offerings
+
+. Elastic Load Balancing - Distribute incoming traffic across multiple targets
+
+. AWS Elastic Beanstalk - Run and Manage Web Apps
+
+. Amazon RDS - Relational Databases - MySQl, Oracle, SQL Server etc
+
+---------------------------------------------------------------------------
+
+ELastic Load Balancer
+
+. Distribute traffic across EC2 instances in one or more AZs in a single region
+
+. Managed service - AWS ensures that is highly available
+
+. Auto scales to handle huge loads 
+
+. Load Balancers can be public or private
+
+. Health checks - route traffic to healthy instances
+
+Three types of Elastic Load Balancers
+
+. Classic Load Balancer ( layer 4 and Layer 7)
+-> Old generation
+
+. Application Load Balancer (Layer 7)
+-> Most popular
+-> New generation (http/https) (http is unsecure)
+-> Supports advanced routing approaches (Headers, Query Params, path and Host Based)
+
+. Network Load Balancer (Layer 4)
+
+-> New generation supporting TCP/TLS and UDP
+-> Very high performance usecases
+
+-------
+
+There is a fourth type of Load Balancer as well - Gateway Load Balancer
+
+The Gateway Load Balancer (GWLB) is a specialized load balancer designed to deploy, scale, and manage third-party virtual appliances on AWS. It allows for seamless traffic distribution across multiple virtual appliances, providing a single entry point for all traffic while offering scalability and increased availability.
+
+Key Points:
+
+Purpose: Used to deploy, scale, and run third-party virtual appliances.
+
+Functionality: Distributes traffic across multiple virtual appliances, scaling them based on demand, reducing potential points of failure, and enhancing network availability.
+
+AWS Marketplace: Enables finding, testing, and purchasing virtual appliances directly from third-party vendors, simplifying the deployment process and accelerating time-to-value.
+
+This addition ensures that users can efficiently manage their network traffic while leveraging third-party solutions directly within AWS.
+
+-------
+
+----------------------------------------------------------------------------------------------------------------------
+
+Application Load Balancer 
+
+Creation:
+
+1. Configure Load Balancer
+
+2. Configure Security Settings
+
+3. Configure Security Groups
+
+4. Configure Routing
+
+5. Register Targets
+
+6. Review 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
