@@ -1,0 +1,61 @@
+AWS LAMBDA
+
+LAMBDA - DevOps
+
+. Cost optimizations
+
+. Govern the aws resources
+
+. Trigger lambda for s3+cloudwatch = which are event driven actions
+  Tell the cloudwatch event or API event on cloudwatch or s3 event triggering to trigger the lambda
+
+Ec2 / Lambda 
+
+Lambda - One thing is compute
+
+         2nd thing is serverless architecutre
+
+.It has two main characterstics to compute family and follow the serverless architecture
+
+.Managing - In Lambda the configurations are directly provided by aws
+ 
+
+LAMBDA - serverless architecture
+ 
+When an user sends the request only then AWS CREATES infra  for runnig  the applications
+
+and  once the usage of the application is completed aws tears down the
+
+infra which is created .
+
+In ec2 all this process should be done manually (tearing down)
+
+Complete owner of the server in ec2 - server architecture
+
+. Ipaddress
+
+. Subnet range
+
+. Autoscaling enabled or not
+
+
+->Lambda all the controls are not given aws handles them - serverless architecture
+
+Serverless - . Cost optimization
+
+             . Security/Compliance
+          
+             . perform regular activities
+---------------------------------------------------------------------
+
+Cost Optimization:
+
+Stale resources ---> Notifications
+
+                ---> Delete 
+
+Lambda function -> Python -> communicate with --> AWS API
+
+
+
+ 

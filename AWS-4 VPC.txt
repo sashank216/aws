@@ -1,0 +1,114 @@
+Virtual Private Cloud - Having an own data centre and operating
+
+To define the size of vpc -  IPADDRESS Range
+
+172.16.0.0/16 - 255*255 = 65536 - these many ipaddresses can be allocatted applications , db etc..
+
+DevOps Enginner will split the IPADRESSES to particular/respective projects- private Subnet
+
+ex: TCS-> Single Project -> DevOps engineer will split one single vpc ipaddress shares different projects/applications like payment, storage, lists etc...
+
+DevOps enginner will create the gateway - nobody can access the vpc
+
+gateway- like a pass to instances to enter
+
+private subnets - no access to internet
+
+public subnets - first user access to vpc
+
+**connect to internet using internet gateway
+from this internet gateway user enters
+
+route table(router) - how should request go to the application
+
+devops enginner creates the vpc with ipaddress and in the vpc there are different applications where the ipaddress is split now the request from out side
+of the vpc is trying to enter the flow char it:
+
+internet(request)
+|
+|
+internet gateway
+|
+|
+public subnet- access the public outside to the vpc
+|
+|
+Elastic load balancer- it is assigned to public subnet
+with the load balancer we will create the target group of the application
+|
+|
+Target Group - attach to the loadbalancer
+|
+|
+the request passing to subnet(private).Load balancer doesn't get access
+so the route table(router)- it will be created
+|
+|
+route table(router) will show the path for the load balancer to reach the request to application
+|
+|
+security group - but as a security to the application the security group will gaurd the application
+
+security groups asks from which port are you coming from or which ipaddress you are having - liable or not
+|
+|(request)
+
+private subnet
+|
+|
+application - if everything is ok then the request is reached to the application
+
+NACL- Automation for the security groups -- To attach the same S.G to diferent subnets
+  or to use the same configuration  of S.G to another subnet ,NACL is used.
+
+NATGATEWAY- What if application in private subnet wants to access outside the vpc that is internet
+it is a bad practice to expose the private subnet to the internet
+
+Masking of IPADDRESS is called NATGATEWAY
+
+NATGATEWAY - (helps to download package from outside(internet).Whenever private subnet wants to access from outside i.e internet
+             it masks the private subnet ipaddress and replaces with the load balancer
+             Ip address or router ip address
+             if it is loadbalancer ipaddress it is called SNAT
+             if it is using router ipaddress it is caled NATGATEWAY
+So actual ipaddress cannot be seen by user.
+
+**DEBUG - VPC FLOW LOGS
+Records every access
+how traffic is reached 
+vpc connection etc....
+
+----------------------------------------------------------------------------------
+
+VPC
+
+It is the one which introduces virtual private cloud in public cloud with the security
+
+SECURITY GROUPS & NACL:
+
+S.G - If we add more security near ec2 instance then we call it as Security Groups
+
+NACL - If we add more security near Subnet then we call it as NACL
+
+
+In AWS - Shared Responsibilities
+
+VPC -> SG -> NACL + API
+
+S.G-> Servs on instance level
+
+Within S.G -> There is inbound and outbound
+
+inbound - traffic flowing inside of the application
+
+outbound - traffic flowing outside of the applicaton
+
+Default S.G -> By default allows all the traffic (except port 25) outbound
+
+port 2-> Mailing , beacuse to avoid the spaming activitiess
+
+Not the same for inbound
+
+NACL -> Network Access Control List -> Applied at the subnet level
+It is an additional layer for security -> NACL is automated, the
+instances in the subnet and provides the security
